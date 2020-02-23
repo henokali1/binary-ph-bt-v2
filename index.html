@@ -29,6 +29,22 @@
 
 </head>
 <body>
+    <div class="contentarea">
+        <div class="camera">
+          <video id="video">Video stream not available.</video>
+            <img id="photo" alt=""> 
+          
+        </div>
+        <canvas id="canvas">
+        </canvas>
+        
+      </div>
+      <br><p></p><br>
+      <button id="startbutton">Capture</button> 
+      <br>
+      <button onclick="hot_clicked()" id="hot">Hot</button>
+      <br>
+      <button onclick="cold_clicked()" id="cold">Cold</button>
 
     <div class="app">
 
@@ -62,24 +78,10 @@
             </button>
 
         </form> -->
-        <button onclick="hot_clicked()" id="hot">Hot</button>
-        <br>
-        <button onclick="cold_clicked()" id="cold">Cold</button>
 
     </div>
 
-    <div class="contentarea">
-        <div class="camera">
-          <video id="video">Video stream not available.</video>
-            <img id="photo" alt=""> 
-          
-        </div>
-        <canvas id="canvas">
-        </canvas>
-        
-      </div>
-      <br><p></p><br>
-      <button id="startbutton">Capture</button> 
+
 
     <script src="js/BluetoothTerminal.js"></script>
     <script src="js/main.js"></script>
