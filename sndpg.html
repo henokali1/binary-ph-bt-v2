@@ -1,0 +1,46 @@
+<h1>Second Page</h1>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+	<script src="js/ui.js"></script>
+	<script src="js/capture.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/logo-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<title>Capture</title>
+	<meta charset='utf-8'>
+	</script>
+</head>
+<body>
+<div class="contentarea">
+  <div class="camera">
+    <video id="video">Video stream not available.</video>
+      <img id="photo" alt=""> 
+    
+  </div>
+  <canvas id="canvas">
+  </canvas>
+  
+</div>
+<br><p></p><br>
+<button id="startbutton">Capture</button> 
+<button id="hot" onclick="hot_callback()">Hot</button> 
+<button id="cold" onclick="cold_callback()">Cold</button> 
+
+
+<br>
+<button onclick="hot_clicked()" id="hot">Hot</button>
+<br>
+<button onclick="cold_clicked()" id="cold">Cold</button>
+
+<script src="js/BluetoothTerminal.js"></script>
+<script src="js/main.js"></script>
+<script src="js/companion.js" data-service-worker="sw.js"></script>
+</body>
+</html>
