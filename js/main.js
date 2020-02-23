@@ -84,11 +84,9 @@ terminalContainer.addEventListener('scroll', () => {
 });
 
 function hot_clicked(){
-  alert('hot')
-  send("hot");
+  send("h");
 }
 
 function cold_clicked(){
-  alert('cold_clicked')
-  send("cold");
+  send("c");
 }
