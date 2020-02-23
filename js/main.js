@@ -82,3 +82,13 @@ terminalContainer.addEventListener('scroll', () => {
 
   isTerminalAutoScrolling = (scrollTopOffset < terminalContainer.scrollTop);
 });
+
+function hot_clicked(){
+  alert('hot')
+  send("hot");
+}
+
+function cold_clicked(){
+  alert('cold_clicked')
+  send("cold");
+}
