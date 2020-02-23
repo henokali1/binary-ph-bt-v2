@@ -52,7 +52,8 @@
 
         <div id="terminal" class="terminal"></div>
 
-        <form id="send-form" class="send-form">
+
+        <!-- <form id="send-form" class="send-form">
 
             <input id="input" type="text" aria-label="Input" autocomplete="off" placeholder="Type something to send...">
 
@@ -60,16 +61,29 @@
                 <i class="material-icons">send</i>
             </button>
 
-        </form>
+        </form> -->
         <button onclick="hot_clicked()" id="hot">Hot</button>
         <br>
         <button onclick="cold_clicked()" id="cold">Cold</button>
 
     </div>
 
+    <div class="contentarea">
+        <div class="camera">
+          <video id="video">Video stream not available.</video>
+            <img id="photo" alt=""> 
+          
+        </div>
+        <canvas id="canvas">
+        </canvas>
+        
+      </div>
+      <br><p></p><br>
+      <button id="startbutton">Capture</button> 
+
     <script src="js/BluetoothTerminal.js"></script>
     <script src="js/main.js"></script>
     <script src="js/companion.js" data-service-worker="sw.js"></script>
-
+    <script src="js/capture.js"></script>
 </body>
 </html>
