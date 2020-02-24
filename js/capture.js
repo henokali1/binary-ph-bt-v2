@@ -29,12 +29,19 @@
     canvas.style.display = "none";
     startbutton = document.getElementById('startbutton');
     const videoConstraints = {};
-    videoConstraints.facingMode = 'environment';
-    const constraints = {
-      video: videoConstraints,
-      audio: false
-    };
 
+    videoConstraints.facingMode = 'environment';
+
+    var constraints = {
+    audio: false,
+    video: {
+      // width: { ideal: size },
+      // height: { ideal: size },
+      //width: { min: 1024, ideal: window.innerWidth, max: 1920 },
+      //height: { min: 776, ideal: window.innerHeight, max: 1080 },
+      facingMode: 'environment',
+    },
+  };
 
     navigator.mediaDevices.getUserMedia(constraints)
     .then(function(stream) {
