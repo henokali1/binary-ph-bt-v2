@@ -29,7 +29,7 @@
     canvas.style.display = "none";
     startbutton = document.getElementById('startbutton');
     
-    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    navigator.mediaDevices.getUserMedia({video: true, audio: false,  facingMode: 'environment'})
     .then(function(stream) {
       video.srcObject = stream;
       video.play();
