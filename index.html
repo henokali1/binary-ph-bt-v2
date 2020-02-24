@@ -29,26 +29,15 @@
 
 </head>
 <body>
-    <a href="sndpg.html">Second Page</a>
-    <div class="contentarea">
-        <div class="camera">
-          <video id="video">Video stream not available.</video>
-            <img id="photo" alt=""> 
-          
-        </div>
-        <canvas id="canvas">
-        </canvas>
-        
-      </div>
-      <br><p></p><br>
-      <button id="startbutton">Capture</button> 
-      <br>
-      <button onclick="hot_clicked()" id="hot">Hot</button>
-      <br>
-      <button onclick="cold_clicked()" id="cold">Cold</button>
-
     <div class="app">
-
+        <div class="contentarea">
+            <div class="camera">
+              <video id="video">Video stream not available.</video>
+                <img id="photo" alt="">
+            </div>
+            <canvas id="canvas">
+            </canvas>
+        </div>
         <div class="toolbar">
 
             <div id="device-name" class="name">Terminal</div>
@@ -79,6 +68,11 @@
             </button>
 
         </form> -->
+    
+      <br><p></p><br>
+      <button id="startbutton">Capture</button>
+      <button onclick="hot_clicked()" id="hot">Hot</button>
+      <button onclick="cold_clicked()" id="cold">Cold</button>
 
     </div>
     <script src="js/BluetoothTerminal.js"></script>
