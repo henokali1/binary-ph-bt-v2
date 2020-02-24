@@ -26,6 +26,7 @@
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     photo.style.display = "none";
+    canvas.style.display = "none";
     startbutton = document.getElementById('startbutton');
     
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
