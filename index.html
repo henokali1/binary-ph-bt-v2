@@ -35,7 +35,7 @@
               <video id="video">Video stream not available.</video>
                 <img id="photo" alt="">
             </div>
-            <canvas id="canvas">
+            <canvas id="canvas" style="filter: grayscale(100%);">
             </canvas>
         </div>
         <div class="toolbar">
@@ -70,14 +70,13 @@
         </form> -->
     
       <br><p></p><br>
-      <button id="startbutton">Capture</button>
+      <button id="startbutton" value="Capture">Capture</button>
       <button onclick="hot_clicked()" id="hot">Hot</button>
       <button onclick="cold_clicked()" id="cold">Cold</button>
 
     </div>
     <script src="js/BluetoothTerminal.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/companion.js" data-service-worker="sw.js"></script>
     <script src="js/capture.js"></script>
 </body>
 </html>

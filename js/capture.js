@@ -56,14 +56,17 @@
     }, false);
 
     startbutton.addEventListener('click', function(ev){
-      if (video.style.display === "none") {
-        video.style.display = "block";
-        photo.style.display = "none";
-        startbutton.innerText = 'Capture';
-      } else {
+      var sb = document.getElementById('startbutton');
+      if(sb.value == "Capture"){
+        canvas.style.display = "block";
         video.style.display = "none";
-        photo.style.display = "block";
+        sb.value = "New";
         startbutton.innerText = 'New';
+      } else {
+        canvas.style.display = "none";
+        video.style.display = "block";
+        sb.value = "Capture";
+        startbutton.innerText = 'Capture';
       }
       takepicture();
       ev.preventDefault();
