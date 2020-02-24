@@ -20,12 +20,6 @@
   var startbutton = null;
   var new_photo_btn = null;
 
-  let shouldFaceUser = false; //Default is the front cam
-  let opts = {
-    audio: false,
-    video: true,
-    facingMode: shouldFaceUser ? 'user' : 'environment'
-  }
 
   function startup() {
     video = document.getElementById('video');
@@ -34,8 +28,15 @@
     photo.style.display = "none";
     canvas.style.display = "none";
     startbutton = document.getElementById('startbutton');
-    
-    navigator.mediaDevices.getUserMedia(opts)
+    const videoConstraints = {};
+    videoConstraints.facingMode = 'environment';
+    const constraints = {
+      video: videoConstraints,
+      audio: false
+    };
+
+
+    navigator.mediaDevices.getUserMedia(constraints)
     .then(function(stream) {
       video.srcObject = stream;
       video.play();
