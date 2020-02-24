@@ -20,6 +20,12 @@
   var startbutton = null;
   var new_photo_btn = null;
 
+  let shouldFaceUser = false; //Default is the front cam
+  let opts = {
+    audio: false,
+    video: true,
+    facingMode: shouldFaceUser ? 'user' : 'environment'
+  }
 
   function startup() {
     video = document.getElementById('video');
@@ -29,7 +35,7 @@
     canvas.style.display = "none";
     startbutton = document.getElementById('startbutton');
     
-    navigator.mediaDevices.getUserMedia({video: true, audio: false,  facingMode: 'environment'})
+    navigator.mediaDevices.getUserMedia(opts)
     .then(function(stream) {
       video.srcObject = stream;
       video.play();
