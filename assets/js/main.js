@@ -90,3 +90,7 @@ function hot_clicked(){
 function cold_clicked(){
   send("c");
 }
+
+function off_clicked(){
+  send("o");
+}
